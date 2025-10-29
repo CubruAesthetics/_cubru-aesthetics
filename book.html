@@ -25,6 +25,7 @@
       <div class="card" style="padding:18px">
         <form id="bookingFormMain">
           <div>
+            <form action="https://formspree.io/f/mkgpbbep" method="POST">
             <label>Full name *</label>
             <input name="name" required placeholder="Jane Doe">
           </div>
@@ -60,11 +61,12 @@
               <label>Time *</label>
               <input type="time" name="time" required>
             </div>
-          </div>
+          </div>        
           <div style="margin-top:10px">
             <label>Notes</label>
             <textarea name="notes" rows="3" placeholder="Allergies, prior treatments..."></textarea>
           </div>
+        </form>
           <div style="margin-top:12px;display:flex;gap:10px;align-items:center">
             <button class="btn" type="submit">Confirm Booking</button>
             <button type="button" class="btn secondary" onclick="document.getElementById('bookingFormMain').reset();">Clear</button>
