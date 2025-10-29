@@ -23,7 +23,31 @@
       <div class="mobile-toggle"></div>
     </div>
   </header>
-
+  <form action="https://formspree.io/f/mkgpbbep" method="POST">
+    <input type="text" name="name" placeholder="Your Name" required>
+    <input type="email" name="email" placeholder="Your Email" required>
+    <textarea name="message" placeholder="Your Message" required></textarea>
+    <button type="submit">Book Appointment</button>
+  </form>
+  
+  <script>
+  document.getElementById('contact-form').addEventListener('submit', async function(e) {
+    e.preventDefault();
+    const form = e.target;
+    const data = new FormData(form);
+    const response = await fetch(form.action, {
+      method: form.method,
+      body: data,
+      headers: { 'Accept': 'application/json' }
+    });
+    if (response.ok) {
+      form.reset();
+      document.getElementById('thank-you').style.display = 'block';
+    } else {
+      alert('Oops! There was a problem submitting your form.');
+    }
+  });
+  </script>
   <main class="container">
     <section class="hero">
       <div class="hero-left fade">
