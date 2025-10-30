@@ -3,130 +3,134 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>CuBru Aesthetics - Home</title>
+  <title>CuBru Aesthetics & Wellness</title>
   <link rel="stylesheet" href="style.css">
   <style>
-    /* ===== General Reset ===== */
-    body, html {
+    body {
       margin: 0;
-      padding: 0;
-      font-family: 'Poppins', sans-serif;
+      font-family: "Poppins", sans-serif;
+      background-color: #fafafa;
       color: #333;
-      background-color: #fff;
     }
 
-    /* ===== Header ===== */
     header {
-      background-color: #c1a27e; /* Elegant gold-tan tone */
-      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
-      position: sticky;
-      top: 0;
-      z-index: 10;
-    }
-    .nav {
+      background-color: #1a1a1a;
+      color: white;
+      padding: 10px 30px;
       display: flex;
       justify-content: space-between;
       align-items: center;
-      padding: 10px 40px;
     }
-    .nav .brand {
+
+    header .brand {
       display: flex;
       align-items: center;
       gap: 10px;
-      color: white;
     }
-    .nav .brand img {
+
+    header img {
       width: 50px;
-      height: 50px;
-      border-radius: 50%;
+      border-radius: 8px;
     }
+
+    header h1 {
+      margin: 0;
+      font-size: 22px;
+    }
+
     .nav-links a {
       color: white;
       text-decoration: none;
-      margin: 0 15px;
-      font-weight: 500;
-      transition: opacity 0.3s;
-    }
-    .nav-links a:hover {
-      opacity: 0.8;
+      margin-left: 20px;
+      transition: color 0.3s;
     }
 
-    /* ===== Hero Section ===== */
+    .nav-links a:hover {
+      color: #f0b67f;
+    }
+
     .hero {
       display: flex;
       flex-wrap: wrap;
       align-items: center;
-      justify-content: space-between;
-      background: url('https://img.freepik.com/premium-photo/modern-spa-waiting-area-with-white-chairs-white-counter-marble-floors-natural-light_36682-85591.jpg') center/cover no-repeat;
+      justify-content: center;
+      padding: 60px 30px;
+      background: url("https://img.freepik.com/premium-photo/modern-spa-waiting-area-with-white-chairs-white-counter-marble-floors-natural-light_36682-85591.jpg") center/cover no-repeat;
       color: white;
-      min-height: 100vh;
-      position: relative;
-      text-shadow: 0 2px 6px rgba(0,0,0,0.5);
+      text-shadow: 1px 1px 5px rgba(0,0,0,0.5);
     }
-    .hero::before {
-      content: "";
-      position: absolute;
-      inset: 0;
-      background: rgba(0, 0, 0, 0.4);
-    }
+
     .hero-left {
-      position: relative;
-      z-index: 2;
-      padding: 100px 60px;
+      flex: 1;
+      min-width: 300px;
       max-width: 600px;
+      background-color: rgba(0,0,0,0.6);
+      padding: 40px;
+      border-radius: 15px;
     }
+
     .hero-left h2 {
-      font-size: 42px;
-      margin-bottom: 20px;
+      font-size: 36px;
+      margin-bottom: 15px;
     }
+
     .hero-left p {
       font-size: 18px;
       line-height: 1.6;
     }
-    .hero-left .btn {
+
+    .btn {
       display: inline-block;
-      padding: 12px 24px;
-      border-radius: 30px;
-      background: #c1a27e;
-      color: #fff;
+      background-color: #f0b67f;
+      color: white;
+      padding: 10px 20px;
+      border-radius: 8px;
       text-decoration: none;
+      font-weight: 500;
       margin-top: 20px;
-      font-weight: 600;
-    }
-    .hero-left .btn.secondary {
-      background: transparent;
-      border: 2px solid #c1a27e;
     }
 
-    /* ===== Feature Sections ===== */
-    .feature {
-      display: flex;
-      flex-wrap: wrap;
-      align-items: center;
-      gap: 40px;
-      padding: 80px 10%;
-    }
-    .feature img {
-      width: 100%;
-      max-width: 550px;
-      border-radius: 16px;
-      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
-    }
-    .feature-text {
-      max-width: 500px;
-    }
-    .feature h3 {
-      color: #c1a27e;
-      font-size: 28px;
-      margin-bottom: 10px;
+    .btn.secondary {
+      background-color: transparent;
+      border: 2px solid #f0b67f;
     }
 
-    /* ===== Footer ===== */
-    footer {
-      background-color: #222;
-      color: #ccc;
+    section {
+      padding: 60px 20px;
       text-align: center;
+    }
+
+    .features {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 25px;
+      padding: 40px;
+    }
+
+    .feature-card {
+      background: white;
+      border-radius: 15px;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.1);
       padding: 20px;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .feature-card:hover {
+      transform: translateY(-8px);
+      box-shadow: 0 6px 20px rgba(0,0,0,0.15);
+    }
+
+    .feature-card img {
+      width: 100%;
+      border-radius: 12px;
+      margin-bottom: 15px;
+    }
+
+    footer {
+      background-color: #1a1a1a;
+      color: white;
+      padding: 20px;
+      text-align: center;
       font-size: 14px;
     }
   </style>
@@ -134,69 +138,55 @@
 <body>
 
   <header>
-    <div class="nav">
-      <div class="brand">
-        <img src="assets/logo.png" alt="logo">
-        <h1>CuBru <span style="display:block;font-size:12px;color:#f0f0f0">Aesthetics & Wellness</span></h1>
-      </div>
-      <div class="nav-links">
-        <a href="index.html">Home</a>
-        <a href="services.html">Services</a>
-        <a href="about.html">About Us</a>
-        <a href="book.html">Book Appointment</a>
-        <a href="contact.html">Contact</a>
-      </div>
+    <div class="brand">
+      <img src="assets/logo.png" alt="CuBru Logo">
+      <h1>CuBru <span style="font-size:12px;display:block;color:#f0b67f;">Aesthetics & Wellness</span></h1>
     </div>
+    <nav class="nav-links">
+      <a href="index.html">Home</a>
+      <a href="services.html">Services</a>
+      <a href="about.html">About Us</a>
+      <a href="book.html">Book Appointment</a>
+      <a href="contact.html">Contact</a>
+    </nav>
   </header>
 
   <main>
-
     <section class="hero">
       <div class="hero-left">
         <h2>Enhance Your Natural Beauty with CuBru Aesthetics & Wellness</h2>
-        <p>Experience luxury care — from weight loss meds and peptides to advanced facial rejuvenation. Every treatment is tailored for elegance, confidence, and radiance.</p>
-        <a class="btn" href="book.html">Book Appointment</a>
-        <a class="btn secondary" href="services.html">View Services</a>
+        <p>Discover timeless confidence through our advanced aesthetic and wellness treatments. From weight loss meds and peptides to injectables and skincare — designed exclusively for you.</p>
+        <a href="book.html" class="btn">Book Appointment</a>
+        <a href="services.html" class="btn secondary">View Services</a>
       </div>
     </section>
 
-    <section class="feature">
-      <img src="https://images.unsplash.com/photo-1567570672006-d7dcee4e6d64?auto=format&fit=crop&w=900&q=80" alt="Aesthetic Treatment">
-      <div class="feature-text">
-        <h3>Aesthetic Treatment Scene</h3>
-        <p>Our team specializes in precision aesthetic procedures — offering safe, natural-looking enhancements for all skin types in a serene, spa-like environment.</p>
+    <section>
+      <h2>Our Signature Treatments</h2>
+      <div class="features">
+        <div class="feature-card">
+          <img src="https://images.unsplash.com/photo-1567570672006-d7dcee4e6d64?auto=format&fit=crop&w=800&q=80" alt="Aesthetic treatment">
+          <h3>Injectables</h3>
+          <p>Enhance contours, smooth lines, and rejuvenate your natural beauty with expert injectables and facial sculpting.</p>
+        </div>
+
+        <div class="feature-card">
+          <img src="https://images.unsplash.com/photo-1731355771304-bc2f23167bea?auto=format&fit=crop&w=800&q=80" alt="Botox treatment">
+          <h3>Botox & Fillers</h3>
+          <p>Refine and refresh with precision Botox and filler treatments tailored to your unique facial features.</p>
+        </div>
+
+        <div class="feature-card">
+          <img src="https://images.unsplash.com/photo-1633354129320-163fb10dd288?auto=format&fit=crop&w=800&q=80" alt="Wellness and weight loss">
+          <h3>Weight Loss & Wellness</h3>
+          <p>Personalized wellness and medical weight loss programs to support your beauty, health, and confidence goals.</p>
+        </div>
       </div>
     </section>
-
-    <section class="feature" style="background:#f9f9f9;">
-      <div class="feature-text">
-        <h3>Botox & Advanced Facial Care</h3>
-        <p>Experience smooth, radiant skin with our expert Botox sessions and advanced rejuvenation treatments — all performed by licensed medical professionals.</p>
-      </div>
-      <img src="https://images.unsplash.com/photo-1731355771304-bc2f23167bea?auto=format&fit=crop&w=900&q=80" alt="Botox Treatment">
-    </section>
-
-    <section class="feature">
-      <img src="https://media.istockphoto.com/id/610118560/photo/interior-of-massage-room-in-spa-salon.webp?a=1&b=1&s=612x612&w=0&k=20&c=IitiqKPbZrhDGIyaPglQiLF5j6PvyDd1LxlxM7okc9o=" alt="Spa Room">
-      <div class="feature-text">
-        <h3>Luxury Spa Room</h3>
-        <p>Unwind in an atmosphere of pure tranquility. Our spa rooms blend modern design with warmth, offering a sanctuary for self-care and rejuvenation.</p>
-      </div>
-    </section>
-
-    <section class="feature" style="background:#f9f9f9;">
-      <div class="feature-text">
-        <h3>Wellness & Weight Loss</h3>
-        <p>We combine science-backed weight loss treatments with peptide therapy to optimize your health, metabolism, and confidence — from the inside out.</p>
-      </div>
-      <img src="https://images.unsplash.com/photo-1633354129320-163fb10dd288?auto=format&fit=crop&w=900&q=80" alt="Wellness Weight Loss Theme">
-    </section>
-
   </main>
 
   <footer>
-    <div>© 2025 CuBru Aesthetics & Wellness | Designed for Luxury & Care</div>
+    © 2025 CuBru Aesthetics & Wellness | All Rights Reserved
   </footer>
-
 </body>
 </html>

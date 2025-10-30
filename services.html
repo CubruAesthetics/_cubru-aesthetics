@@ -5,53 +5,218 @@
   <meta name="viewport" content="width=device-width,initial-scale=1" />
   <title>CuBru Aesthetics - Services</title>
   <link rel="stylesheet" href="style.css">
+  <style>
+    body {
+      font-family: "Poppins", sans-serif;
+      margin: 0;
+      background-color: #fafafa;
+      color: #333;
+    }
+
+    header {
+      background-color: #f0cfcf;
+      padding: 15px 30px;
+      position: sticky;
+      top: 0;
+      z-index: 10;
+    }
+
+    .nav {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+    }
+
+    .nav .brand {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .nav .brand img {
+      height: 50px;
+    }
+
+    .nav-links a {
+      margin-left: 20px;
+      text-decoration: none;
+      color: #333;
+      font-weight: 500;
+      transition: color 0.3s;
+    }
+
+    .nav-links a:hover {
+      color: #b57272;
+    }
+
+    main {
+      max-width: 950px;
+      margin: 50px auto;
+      padding: 0 20px;
+    }
+
+    h3 {
+      text-align: center;
+      font-size: 30px;
+      margin-bottom: 40px;
+      color: #444;
+    }
+
+    details {
+      background: #fff;
+      border-radius: 10px;
+      margin-bottom: 18px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+      padding: 18px 20px;
+      transition: all 0.3s ease;
+    }
+
+    summary {
+      font-weight: 600;
+      font-size: 20px;
+      color: #b57272;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      cursor: pointer;
+    }
+
+    summary::after {
+      content: "＋";
+      font-size: 22px;
+      color: #b57272;
+      transition: transform 0.3s ease;
+    }
+
+    details[open] summary::after {
+      content: "−";
+      transform: rotate(180deg);
+    }
+
+    details p {
+      padding: 10px 0 0 5px;
+      margin: 0;
+      color: #555;
+      line-height: 1.6;
+    }
+
+    .service-item {
+      margin-left: 15px;
+      padding: 4px 0;
+      font-size: 15px;
+      color: #444;
+      border-left: 3px solid #f0cfcf;
+      padding-left: 10px;
+    }
+
+    footer {
+      text-align: center;
+      padding: 25px;
+      margin-top: 60px;
+      background: #f0cfcf;
+      color: #333;
+      font-weight: 500;
+    }
+
+    /* Animation for dropdown */
+    details[open] summary ~ * {
+      animation: sweep 0.4s ease-in-out;
+    }
+
+    @keyframes sweep {
+      0% {opacity: 0; margin-top: -10px;}
+      100% {opacity: 1; margin-top: 0;}
+    }
+  </style>
 </head>
+
 <body>
   <header>
     <div class="nav">
-      <div class="brand"><img src="assets/logo.png" alt="logo"><h1>CuBru <span style="display:block;font-size:12px;color:#ddd">Aesthetics & Wellness</span></h1></div>
+      <div class="brand">
+        <img src="assets/logo.png" alt="logo">
+        <h1>CuBru <span style="display:block;font-size:12px;color:#555">Aesthetics & Wellness</span></h1>
+      </div>
       <div class="nav-links">
         <a href="index.html">Home</a>
-        <a href="services.html">Services</a>
+        <a href="services.html" class="active">Services</a>
         <a href="about.html">About Us</a>
         <a href="book.html">Book Appointment</a>
         <a href="contact.html">Contact</a>
       </div>
     </div>
   </header>
-  <main class="container">
-    <section>
-      <h3 class="fade">Services & Pricing</h3>
-      <div class="grid">
-        <div class="card fade">
-          <h3>Injectables</h3>
-          <p class="muted"><strong>Botox</strong> — $10 per unit (30 min)</p>
-          <p class="muted"><strong>Lip Fillers</strong> — $650 (45 min)</p>
-        </div>
-        <div class="card fade">
-          <h3>Weight Loss Meds & Peptides</h3>
-          <p>
-            Personalized medication plans including Semaglutide and Tirzepatide to support safe and sustainable weight loss under clinical guidance.
-          </p>
-          <p class="muted"><strong>Trizepitide</strong> — Month 1: $250 • Month 2: $300 • Month 3: $350</p>
-          <p class="muted"><strong>Semiglutide</strong> — Month 1: $180 • Month 2: $225 • Month 3: $275</p>
-        </div>
-        <div class="card fade">
-          <h3>IV Therapy</h3>
-          <p class="muted">Immunity IV — $150 (30–45 min)</p>
-          <p class="muted">Recovery & Performance — $165 (30–45 min)</p>
-          <p class="muted">Hangover IV — $150 (30–45 min)</p>
-          <p class="muted">NAD+ 500 mg IV — $400 (45–60 min)</p>
-        </div>
-        <div class="card fade">
-          <h3>Skin Treatments</h3>
-          <p class="muted">Microneedling — $200 (60 min)</p>
-          <p class="muted">Microneedling + PRP — $350 (90 min)</p>
-        </div>
-      </div>
-    </section>
+
+  <main>
+    <h3>Our Services</h3>
+
+    <details>
+      <summary>Injectables</summary>
+      <div class="service-item">Tirzepatide "Renew Fit Intensive" (1 month treatment with NAD+ and Fat Burners)</div>
+      <div class="service-item">Sculptra Face</div>
+      <div class="service-item">Endolift</div>
+      <div class="service-item">Radiesse</div>
+      <div class="service-item">PDO Thread</div>
+      <div class="service-item">Procell Therapy (Hair Restoration)</div>
+      <div class="service-item">Labs (CBC)</div>
+      <div class="service-item">Lipo + Intramuscular Injection</div>
+      <div class="service-item">Procell Therapies (Face)</div>
+      <div class="service-item">Kybella</div>
+      <div class="service-item">Follow-up Appointment</div>
+      <div class="service-item">Botox</div>
+      <div class="service-item">Versa Filler (½ Syringe)</div>
+      <div class="service-item">Botox - Forehead</div>
+      <div class="service-item">Restylane Face Filler (Juvederm Voluma)</div>
+      <div class="service-item">Botox - Smiley Eyes</div>
+      <div class="service-item">Botox - Glabella (Between Eyes)</div>
+      <div class="service-item">Lip Filler (Juvederm Ultra Plus)</div>
+      <div class="service-item">Skinvive Juvederm</div>
+      <div class="service-item">B12 Injection</div>
+      <div class="service-item">Skincare Consultation</div>
+    </details>
+
+    <details>
+      <summary>IV Therapy</summary>
+      <div class="service-item">Vitamin C and Complex B Infusion</div>
+      <div class="service-item">Inner Beauty IV Kit</div>
+      <div class="service-item">B-Lean IV Therapy</div>
+      <div class="service-item">Myers' Cocktail IV Therapy</div>
+      <div class="service-item">Immunity IV</div>
+      <div class="service-item">Zofran IV</div>
+      <div class="service-item">6-Months IV Therapy Plan</div>
+      <div class="service-item">Vitamin C Infusion</div>
+      <div class="service-item">Iron Infusion IV</div>
+      <div class="service-item">NAD+ IV Therapy</div>
+    </details>
+
+    <details>
+      <summary>Weight Loss</summary>
+      <div class="service-item">Tirzepatide Plus 2.5 mg weekly + Fat Burners (1-Month Treatment)</div>
+      <div class="service-item">Tirzepatide 5 mg (1 Month, 4 Injections + 4 Fat Burners)</div>
+      <div class="service-item">Tirzepatide 7.5 mg (1 Month, 4 Injections + 4 Fat Burners)</div>
+      <div class="service-item">Tirzepatide 10 mg (1 Month, 4 Injections + 4 Fat Burners)</div>
+      <div class="service-item">Semaglutide Plus (GLP-1+) 0.25 mg + Lipo Plus</div>
+      <div class="service-item">Semaglutide Plus (GLP-1+) 0.5 mg + Lipo Plus</div>
+      <div class="service-item">Semaglutide Plus (GLP-1+) 1 mg + Lipo Plus</div>
+      <div class="service-item">Semaglutide (GLP-1) 1.7 mg + Lipo Plus + B12 or L-Carnitine</div>
+    </details>
+
+    <details>
+      <summary>Skin & Wellness Treatments</summary>
+      <div class="service-item">Procell Therapy (Face)</div>
+      <div class="service-item">Hair Restoration Therapy</div>
+      <div class="service-item">Endolift Rejuvenation</div>
+      <div class="service-item">PDO Thread Lift</div>
+      <div class="service-item">Skinvive Hydration Treatment</div>
+      <div class="service-item">Vitamin B12 Injection</div>
+      <div class="service-item">Skincare Regimen Consultation</div>
+    </details>
+
   </main>
-  <footer><div>© 2025 CuBru Aesthetics & Wellness</div></footer>
-<script src="script.js"></script>
+
+  <footer>
+    <div>© 2025 CuBru Aesthetics & Wellness</div>
+  </footer>
 </body>
 </html>
