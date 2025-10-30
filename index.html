@@ -3,219 +3,200 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>CuBru Aesthetics & Wellness</title>
+  <title>CuBru Aesthetics - Home</title>
   <link rel="stylesheet" href="style.css">
   <style>
-    body {
+    /* ===== General Reset ===== */
+    body, html {
       margin: 0;
-      font-family: "Poppins", sans-serif;
-      background-color: #fff;
+      padding: 0;
+      font-family: 'Poppins', sans-serif;
       color: #333;
+      background-color: #fff;
     }
+
+    /* ===== Header ===== */
     header {
-      background-color: #000;
-      color: #fff;
-      padding: 20px 10%;
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
+      background-color: #c1a27e; /* Elegant gold-tan tone */
+      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
       position: sticky;
       top: 0;
-      z-index: 999;
+      z-index: 10;
     }
-    header .brand {
+    .nav {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 10px 40px;
+    }
+    .nav .brand {
       display: flex;
       align-items: center;
-      gap: 12px;
+      gap: 10px;
+      color: white;
     }
-    header img {
-      height: 55px;
-      width: 55px;
+    .nav .brand img {
+      width: 50px;
+      height: 50px;
       border-radius: 50%;
-      object-fit: cover;
     }
     .nav-links a {
-      margin: 0 14px;
-      color: #fff;
+      color: white;
       text-decoration: none;
+      margin: 0 15px;
       font-weight: 500;
-      transition: color 0.3s;
+      transition: opacity 0.3s;
     }
     .nav-links a:hover {
-      color: #ffd700;
+      opacity: 0.8;
     }
-    /* Hero Section */
+
+    /* ===== Hero Section ===== */
     .hero {
-      position: relative;
-      color: #fff;
-      padding: 120px 10%;
       display: flex;
+      flex-wrap: wrap;
       align-items: center;
       justify-content: space-between;
-      flex-wrap: wrap;
-      background: linear-gradient(to right, rgba(0,0,0,0.75), rgba(0,0,0,0.25)),
-        url('https://source.unsplash.com/1600x900/?luxury-spa-interior') center/cover no-repeat;
-      border-radius: 0 0 40px 40px;
+      background: url('https://img.freepik.com/premium-photo/modern-spa-waiting-area-with-white-chairs-white-counter-marble-floors-natural-light_36682-85591.jpg') center/cover no-repeat;
+      color: white;
+      min-height: 100vh;
+      position: relative;
+      text-shadow: 0 2px 6px rgba(0,0,0,0.5);
+    }
+    .hero::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background: rgba(0, 0, 0, 0.4);
     }
     .hero-left {
+      position: relative;
+      z-index: 2;
+      padding: 100px 60px;
       max-width: 600px;
     }
-    .hero-left h1 {
-      font-size: 3rem;
-      color: #ffd700;
-      line-height: 1.1;
+    .hero-left h2 {
+      font-size: 42px;
+      margin-bottom: 20px;
     }
     .hero-left p {
-      font-size: 1.05rem;
+      font-size: 18px;
       line-height: 1.6;
-      color: #f1f1f1;
-      margin-top: 10px;
     }
     .hero-left .btn {
       display: inline-block;
-      margin-top: 20px;
-      padding: 12px 26px;
-      border-radius: 28px;
+      padding: 12px 24px;
+      border-radius: 30px;
+      background: #c1a27e;
+      color: #fff;
       text-decoration: none;
+      margin-top: 20px;
       font-weight: 600;
-      transition: all 0.3s ease;
     }
-    .btn {
-      background: #ffd700;
-      color: #000;
-      box-shadow: 0 8px 20px rgba(255,215,0,0.2);
-    }
-    .btn:hover {
-      background: #e0c000;
-      transform: translateY(-2px);
-    }
-    .btn.secondary {
-      border: 2px solid #ffd700;
+    .hero-left .btn.secondary {
       background: transparent;
-      color: #ffd700;
-      margin-left: 12px;
-    }
-    .btn.secondary:hover {
-      background: #ffd700;
-      color: #000;
-    }
-    .hero-right img {
-      width: 90%;
-      max-width: 520px;
-      border-radius: 24px;
-      box-shadow: 0 8px 40px rgba(0,0,0,0.35);
+      border: 2px solid #c1a27e;
     }
 
-    /* Highlights Section */
-    .highlights {
-      padding: 80px 10%;
-      background-color: #fafafa;
-      text-align: center;
-    }
-    .highlights h2 {
-      font-size: 2rem;
-      color: #111;
-    }
-    .highlights p {
-      max-width: 700px;
-      margin: 0 auto 40px;
-      color: #555;
-    }
-    .cards {
+    /* ===== Feature Sections ===== */
+    .feature {
       display: flex;
       flex-wrap: wrap;
-      gap: 25px;
-      justify-content: center;
+      align-items: center;
+      gap: 40px;
+      padding: 80px 10%;
     }
-    .card {
-      flex: 1 1 300px;
-      background: #fff;
-      border-radius: 20px;
-      padding: 24px;
-      box-shadow: 0 4px 20px rgba(0,0,0,0.08);
-      transition: transform 0.3s ease, box-shadow 0.3s ease;
-    }
-    .card:hover {
-      transform: translateY(-6px);
-      box-shadow: 0 6px 28px rgba(0,0,0,0.12);
-    }
-    .card img {
+    .feature img {
       width: 100%;
+      max-width: 550px;
       border-radius: 16px;
-      margin-bottom: 12px;
-      object-fit: cover;
-      height: 170px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
     }
+    .feature-text {
+      max-width: 500px;
+    }
+    .feature h3 {
+      color: #c1a27e;
+      font-size: 28px;
+      margin-bottom: 10px;
+    }
+
+    /* ===== Footer ===== */
     footer {
-      background-color: #000;
-      color: #fff;
+      background-color: #222;
+      color: #ccc;
       text-align: center;
-      padding: 18px;
-      font-size: 0.9rem;
+      padding: 20px;
+      font-size: 14px;
     }
   </style>
 </head>
-
 <body>
+
   <header>
-    <div class="brand">
-      <img src="assets/logo.png" alt="CuBru logo">
-      <div>
-        <h2 style="margin:0;">CuBru</h2>
-        <small style="color:#ccc;">Aesthetics & Wellness</small>
+    <div class="nav">
+      <div class="brand">
+        <img src="assets/logo.png" alt="logo">
+        <h1>CuBru <span style="display:block;font-size:12px;color:#f0f0f0">Aesthetics & Wellness</span></h1>
       </div>
-    </div>
-    <div class="nav-links">
-      <a href="index.html">Home</a>
-      <a href="services.html">Services</a>
-      <a href="about.html">About Us</a>
-      <a href="book.html">Book Appointment</a>
-      <a href="contact.html">Contact</a>
+      <div class="nav-links">
+        <a href="index.html">Home</a>
+        <a href="services.html">Services</a>
+        <a href="about.html">About Us</a>
+        <a href="book.html">Book Appointment</a>
+        <a href="contact.html">Contact</a>
+      </div>
     </div>
   </header>
 
-  <!-- Hero Section -->
-  <section class="hero">
-    <div class="hero-left">
-      <h1>Refined Beauty. Timeless Confidence.</h1>
-      <p>Welcome to <strong>CuBru Aesthetics & Wellness</strong> — where science meets elegance.
-      We offer Botox, lip fillers, microneedling & PRP, IV therapy, and
-      <strong>Weight Loss Meds & Peptides</strong> with personalized care and precision.</p>
-      <a class="btn" href="book.html">Book Appointment</a>
-      <a class="btn secondary" href="services.html">View Services</a>
-      <p style="margin-top:15px;">📞 SMS: <strong>+1 305-202-2754</strong></p>
-    </div>
-    <div class="hero-right">
-      <img src="https://source.unsplash.com/900x600/?aesthetic-treatment" alt="Aesthetic treatment">
-    </div>
-  </section>
+  <main>
 
-  <!-- Highlights Section -->
-  <section class="highlights">
-    <h2>Why Choose CuBru Aesthetics?</h2>
-    <p>Clinical skill, a refined environment, and personalized plans — results with confidence.</p>
+    <section class="hero">
+      <div class="hero-left">
+        <h2>Enhance Your Natural Beauty with CuBru Aesthetics & Wellness</h2>
+        <p>Experience luxury care — from weight loss meds and peptides to advanced facial rejuvenation. Every treatment is tailored for elegance, confidence, and radiance.</p>
+        <a class="btn" href="book.html">Book Appointment</a>
+        <a class="btn secondary" href="services.html">View Services</a>
+      </div>
+    </section>
 
-    <div class="cards">
-      <div class="card">
-        <img src="https://source.unsplash.com/800x600/?botox-treatment" alt="Botox precision">
-        <h3>Aesthetic Precision</h3>
-        <p>Performed by trained professionals using modern, safe techniques.</p>
+    <section class="feature">
+      <img src="https://images.unsplash.com/photo-1567570672006-d7dcee4e6d64?auto=format&fit=crop&w=900&q=80" alt="Aesthetic Treatment">
+      <div class="feature-text">
+        <h3>Aesthetic Treatment Scene</h3>
+        <p>Our team specializes in precision aesthetic procedures — offering safe, natural-looking enhancements for all skin types in a serene, spa-like environment.</p>
       </div>
-      <div class="card">
-        <img src="https://source.unsplash.com/800x600/?spa-room-luxury" alt="Luxury spa room">
-        <h3>Luxury Experience</h3>
-        <p>A calm, curated space designed to restore and uplift.</p>
+    </section>
+
+    <section class="feature" style="background:#f9f9f9;">
+      <div class="feature-text">
+        <h3>Botox & Advanced Facial Care</h3>
+        <p>Experience smooth, radiant skin with our expert Botox sessions and advanced rejuvenation treatments — all performed by licensed medical professionals.</p>
       </div>
-      <div class="card">
-        <img src="https://source.unsplash.com/800x600/?weight-loss-wellness" alt="Wellness & Peptides">
-        <h3>Weight Loss & Peptides</h3>
-        <p>Clinician-led programs with Semaglutide, Tirzepatide, and peptides for safe progress.</p>
+      <img src="https://images.unsplash.com/photo-1731355771304-bc2f23167bea?auto=format&fit=crop&w=900&q=80" alt="Botox Treatment">
+    </section>
+
+    <section class="feature">
+      <img src="https://media.istockphoto.com/id/610118560/photo/interior-of-massage-room-in-spa-salon.webp?a=1&b=1&s=612x612&w=0&k=20&c=IitiqKPbZrhDGIyaPglQiLF5j6PvyDd1LxlxM7okc9o=" alt="Spa Room">
+      <div class="feature-text">
+        <h3>Luxury Spa Room</h3>
+        <p>Unwind in an atmosphere of pure tranquility. Our spa rooms blend modern design with warmth, offering a sanctuary for self-care and rejuvenation.</p>
       </div>
-    </div>
-  </section>
+    </section>
+
+    <section class="feature" style="background:#f9f9f9;">
+      <div class="feature-text">
+        <h3>Wellness & Weight Loss</h3>
+        <p>We combine science-backed weight loss treatments with peptide therapy to optimize your health, metabolism, and confidence — from the inside out.</p>
+      </div>
+      <img src="https://images.unsplash.com/photo-1633354129320-163fb10dd288?auto=format&fit=crop&w=900&q=80" alt="Wellness Weight Loss Theme">
+    </section>
+
+  </main>
 
   <footer>
-    © 2025 CuBru Aesthetics & Wellness
+    <div>© 2025 CuBru Aesthetics & Wellness | Designed for Luxury & Care</div>
   </footer>
+
 </body>
 </html>
