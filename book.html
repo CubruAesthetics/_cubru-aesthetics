@@ -7,94 +7,165 @@
   <link rel="stylesheet" href="style.css">
   <style>
     body {
-      background-color: #f7f9fc;
-      color: #222;
+      background-color: #000;
+      color: #f8f8f8;
       font-family: 'Poppins', sans-serif;
     }
+
+    header {
+      background-color: #111;
+      padding: 15px 30px;
+      position: sticky;
+      top: 0;
+      z-index: 10;
+      border-bottom: 2px solid #d4af37;
+    }
+
+    .nav {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+    }
+
+    .nav .brand {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .nav .brand img {
+      height: 50px;
+    }
+
+    .nav h1 {
+      color: #d4af37;
+      margin: 0;
+    }
+
+    .nav h1 span {
+      display: block;
+      font-size: 12px;
+      color: #ccc;
+    }
+
+    .nav-links a {
+      margin-left: 20px;
+      text-decoration: none;
+      color: #f8f8f8;
+      font-weight: 500;
+      transition: color 0.3s;
+    }
+
+    .nav-links a:hover,
+    .nav-links .active {
+      color: #d4af37;
+    }
+
     .booking-section {
       max-width: 700px;
       margin: 60px auto;
-      background: #fff;
+      background: #111;
       padding: 40px 50px;
       border-radius: 16px;
-      box-shadow: 0 8px 30px rgba(0,0,0,0.08);
+      box-shadow: 0 0 25px rgba(212,175,55,0.2);
+      border: 1px solid #d4af37;
     }
+
     .booking-section h2 {
       text-align: center;
-      font-size: 26px;
-      color: #111;
+      font-size: 28px;
+      color: #d4af37;
       margin-bottom: 10px;
+      letter-spacing: 1px;
     }
+
     .booking-section p {
       text-align: center;
-      color: #555;
+      color: #ddd;
       margin-bottom: 30px;
     }
+
     .booking-form .form-group {
       margin-bottom: 18px;
     }
+
     .booking-form input,
     .booking-form select,
     .booking-form textarea {
       width: 100%;
       padding: 12px 14px;
-      border: 1px solid #ccc;
+      border: 1px solid #555;
       border-radius: 8px;
       font-size: 15px;
-      color: #222;
-      background-color: #fdfdfd;
-      transition: border 0.3s ease;
+      color: #f8f8f8;
+      background-color: #222;
+      transition: border 0.3s ease, background 0.3s ease;
     }
+
     .booking-form select option {
       color: #000;
       background-color: #fff;
     }
+
     .booking-form input:focus,
     .booking-form select:focus,
     .booking-form textarea:focus {
-      border-color: #7cc0c9;
+      border-color: #d4af37;
       outline: none;
-      box-shadow: 0 0 6px rgba(124,192,201,0.4);
+      box-shadow: 0 0 6px rgba(212,175,55,0.6);
+      background-color: #1a1a1a;
     }
+
+    label {
+      color: #d4af37;
+    }
+
     .book-btn {
       display: inline-block;
       width: 100%;
       padding: 12px;
       border: none;
-      background-color: #7cc0c9;
-      color: white;
+      background-color: #d4af37;
+      color: #000;
       border-radius: 8px;
       font-size: 16px;
       font-weight: 600;
       cursor: pointer;
-      transition: background 0.3s ease;
+      transition: background 0.3s ease, color 0.3s ease;
     }
+
     .book-btn:hover {
-      background-color: #6ab2ba;
+      background-color: #c19d2b;
+      color: #fff;
     }
+
     footer {
       text-align: center;
       margin-top: 50px;
-      padding: 15px 0;
-      color: #888;
+      padding: 20px 0;
+      background-color: #111;
+      border-top: 2px solid #d4af37;
+      color: #d4af37;
+      font-weight: 500;
     }
   </style>
 </head>
 <body>
   <header>
-    <div class="nav" style="background:#7cc0c9;">
+    <div class="nav">
       <div class="brand">
         <img src="assets/logo.png" alt="logo">
-        <h1 style="color:#fff;">CuBru 
-          <span style="display:block;font-size:12px;color:#f0f0f0;">Aesthetics & Wellness</span>
+        <h1>CuBru 
+          <span>Aesthetics & Wellness</span>
         </h1>
       </div>
       <div class="nav-links">
-        <a href="index.html" style="color:#fff;">Home</a>
-        <a href="services.html" style="color:#fff;">Services</a>
-        <a href="about.html" style="color:#fff;">About Us</a>
-        <a href="book.html" style="color:#fff;">Book Appointment</a>
-        <a href="contact.html" style="color:#fff;">Contact</a>
+        <a href="index.html">Home</a>
+        <a href="services.html">Services</a>
+        <a href="about.html">About Us</a>
+        <a href="book.html" class="active">Book Appointment</a>
+        <a href="contact.html">Contact</a>
       </div>
     </div>
   </header>
@@ -104,7 +175,7 @@
       <h2>Book an Appointment</h2>
       <p>Schedule your session with CuBru Aesthetics & Wellness below.</p>
 
-      <form action="https://formspree.io/f/mkgpbbep" method="POST" class="booking-form">
+      <form action="https://formspree.io/f/mrboaqro" method="POST" class="booking-form">
         <div class="form-group">
           <input type="text" name="name" placeholder="Full Name" required>
         </div>
@@ -116,21 +187,9 @@
         </div>
 
         <div class="form-group">
-          <label for="service" style="font-weight:600;display:block;margin-bottom:6px;">Select a Service</label>
+          <label for="service">Select a Service</label>
           <select name="service" id="service" required>
             <option value="">-- Choose a Service --</option>
-            <optgroup label="Injectables">
-              <option>Botox</option>
-              <option>Kybella</option>
-              <option>Versa Filler (1/2 Syringe)</option>
-              <option>Restylane / Juvederm Voluma</option>
-              <option>Skinvive Juvederm</option>
-              <option>Lip Filler – Juvederm Ultra Plus</option>
-              <option>PDO Thread</option>
-              <option>Radiesse</option>
-              <option>Sculptra Face</option>
-              <option>Endolift</option>
-            </optgroup>
 
             <optgroup label="IV Therapy">
               <option>Vitamin C & Complex B</option>
